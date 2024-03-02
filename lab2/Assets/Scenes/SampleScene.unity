@@ -2568,7 +2568,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3533,7 +3533,9 @@ GameObject:
   - component: {fileID: 798617535}
   - component: {fileID: 798617534}
   - component: {fileID: 798617533}
-  - component: {fileID: 798617537}
+  - component: {fileID: 798617538}
+  - component: {fileID: 798617540}
+  - component: {fileID: 798617539}
   m_Layer: 0
   m_Name: Mario_Small_Idle
   m_TagString: Untagged
@@ -3670,7 +3672,7 @@ Transform:
   m_Father: {fileID: 522949533}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &798617537
+--- !u!114 &798617538
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3679,11 +3681,41 @@ MonoBehaviour:
   m_GameObject: {fileID: 798617532}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de93834ff48db5d4790291a8afe63739, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e1ebfa797c40f44586b5419efd41ea0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  jumpForce: 7
+  moveSpeed: 8
+  jumpForce: 15
+--- !u!114 &798617539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 798617532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa289d4582d21f045abd71aa95547cfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  smoothSpeed: 0.125
+  offset: {x: 0, y: 0, z: 0}
+--- !u!114 &798617540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 798617532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa289d4582d21f045abd71aa95547cfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  smoothSpeed: 0.125
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1001 &827829362
 PrefabInstance:
   m_ObjectHideFlags: 0
