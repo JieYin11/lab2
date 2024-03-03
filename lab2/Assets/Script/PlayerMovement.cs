@@ -140,6 +140,31 @@ public class PlayerMovement : MonoBehaviour
                 velocity.y = 0f;
             }
         }
+       
     }
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.gameObject.CompareTag("Weak Spot"))
+        {
+            // 反弹逻辑
+            velocity.y = jumpForce;
+            jumping = true;
+        }
+        else if (collider.gameObject.CompareTag("Enemy"))
+        {
+            // 反弹逻辑
+            velocity.y = jumpForce;
+            jumping = true;
+        }
+    }
+    public void EnableMovement(bool enable)
+    {
+        enabled = enable;
+        if (!enable)
+        {
+            velocity = Vector2.zero;
+        }
+    }
+
 
 }
